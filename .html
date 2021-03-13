@@ -1,0 +1,1178 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Typing Speedo</title>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/AvinashProgrammer/Typing-Speedo/main/css/style.css" />
+</head>
+<body>
+    <div id="loader">
+        <div id="loader-circle"></div>
+    </div>
+    <nav id="nav">
+        <div id="logo">
+            <img src="https://raw.githubusercontent.com/AvinashProgrammer/Typing-Speedo/main/img/logo.svg" alt="logo"/>
+            <a href="#">
+                <span>Typing</span>
+                <span>Speedo</span>
+            </a>
+        </div>
+        <div id="hamburger">
+            <div id="menu-line"></div>
+        </div>
+        <ul id="nav-links">
+            <li>
+                <a href="#"><i class="fas fa-home icon"></i>Home</a>
+            </li>
+            <li>
+                <a href="#quickTest"><i class="fas fa-user icon"></i>Quick Test</a>
+            </li>
+            <li>
+                <a href="#game"><i class="fas fa-gamepad icon"></i>Game</a>
+            </li>
+            <li>
+                <a href="#contact-us"><i class="fas fa-user-headset icon"></i>Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <h2 class="text">
+            Typing Speedo helps you <br>
+            to enhance your <br>
+            Typing speed!
+        </h2>
+        <img src="https://raw.githubusercontent.com/AvinashProgrammer/Typing-Speedo/main/img/illustration.png" alt="illustration" class="illustrationImg">
+        
+        <div class="cards">
+            <div class="card" id="quickTest">
+                <section>
+                    <div class="wave wave1"></div>
+                    <div class="wave wave2"></div>
+                    <div class="wave wave3"></div>
+                    <div class="wave wave4"></div>
+                </section>
+                <img src="https://raw.githubusercontent.com/AvinashProgrammer/Typing-Speedo/main/img/test.svg" alt="test svg">
+                <div class="title">Quick Test</div>
+                <div class="desc">Check your typing speed with this quick typing test</div>
+                <button id="testBtn">Start</button>
+            </div>
+            <div class="card" id="game">
+                <section>
+                    <div class="wave wave1"></div>
+                    <div class="wave wave2"></div>
+                    <div class="wave wave3"></div>
+                    <div class="wave wave4"></div>
+                </section>
+                <img src="https://raw.githubusercontent.com/AvinashProgrammer/Typing-Speedo/main/img/game.svg" alt="game svg">
+                <div class="title">Word Tris</div>
+                <div class="desc">Play word tris game and increase your typing speed!</div>
+                <button id="startGameBtn">Play</button>
+            </div>
+        </div>
+        
+      
+        <form id="contact-us">
+            <h3 id="contact-us-heading">Send a message</h3>
+            <div class="contact-us-input-box">
+                <input type="text" id="contact-us-name" required=""/>
+                <label for="contact-us-name">Name</label>
+            </div>
+            <div class="contact-us-input-box">
+                <input type="text" id="contact-us-subject" required=""/>
+                <label for="contact-us-subject">Subject</label>
+            </div>
+            <div class="contact-us-input-box">
+                <textarea id="contact-us-message" required=""></textarea>
+                <label for="contact-us-message">Message</label>
+            </div>
+            <button id="contact-us-submit-btn">Send</button>
+        </form>
+        
+    </div>
+    
+    <div class="test-container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div id="test-nav">
+            <div class="row">
+                <img src="https://raw.githubusercontent.com/AvinashProgrammer/Typing-Speedo/main/img/timer.svg" alt="timer">
+                <div id="time"></div>
+            </div>
+            <div id="test-btn">
+                <i class="fad fa-angle-right icon" id="backBtn"></i>
+            </div>
+        </div>
+        
+        <div id="text"></div>
+        
+        <div class="typing-row">
+            <input type="text" id="input" placeholder="Type here..."/>
+            <div id="continueBtn">
+                <i class="fad fa-arrow-right"></i>
+            </div>
+        </div>
+    </div>
+    
+    <div class="result-container">
+        <div id="result-nav">
+            <div>Result</div>
+            <div id="result-back-btn">
+                <i class="fad fa-angle-right icon"></i>
+            </div>
+        </div>
+        
+        <section>
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+            <div class="wave wave4"></div>
+        </section>
+        
+        <div id="result-box">
+            
+            <div class="box">
+                <div class="progress">
+                    <svg>
+                        <circle cx="70" cy="70" r="70"></circle>
+                        <circle cx="70" cy="70" r="70" id="progress-circle"></circle>
+                    </svg>
+                    <div class="progress-percent"><span></span></div>
+                </div>
+                <h2 class="progress-text">Accuracy</h2>
+            </div>
+            
+            <div class="result-card card-1">
+                <p id="grossSpeed"></p>
+                <p>Gross Speed</p>
+            </div>
+            <div class="result-card">
+                <p id="netSpeed"></p>
+                <p>Net Speed</p>
+            </div>
+            <div class="result-card">
+                <p id="resultTime"></p>
+                <p>Time</p>
+            </div>
+            <div class="result-card">
+                <p id="result-characters"></p>
+                <p>Characters</p>
+            </div>
+            <div class="result-card">
+                <p id="result-words"></p>
+                <p>Words</p>
+            </div>
+            
+        </div>
+    </div>
+    
+    <div id="game-container">
+        <div id="game-nav">
+            <div id="game-heading">Word Tris Game</div>
+            <div id="game-back-btn">
+                <i class="fad fa-angle-right icon"></i>
+            </div>
+        </div>
+        
+        <canvas></canvas>
+        <input type="text" id="game-input"/>
+        <button id="openKeyboard">Keyboard</button>
+        <div id="score">0</div>
+        <button id="restart">Play Again!</button>
+    </div>
+    
+    <div id="history-container">
+        <div id="history-nav">
+            <div>Previous results</div>
+            <div id="history-back-btn">
+                <i class="fad fa-angle-right icon"></i>
+            </div>
+        </div>
+        
+        <div class="previous-result-cards"></div>
+    </div>
+    
+<script>
+    
+    const $ = s => document.querySelector(s);
+
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+    hamburger.classList.toggle("active");
+})
+
+addEventListener("load", () => {
+    $("#loader").style.display = "none";
+})
+
+
+let container = $(".container");
+let testContainer = $(".test-container");
+let testBtn = $("#testBtn");
+let nav = $("#nav");
+let backBtn = $("#backBtn");
+
+let paragraphs = [
+    `Aesop was one of the great Greek writers. He is best known for his fables, stories that have a moral. They teach us something about how we should live our lives. Aesop wrote thousands of these stories. Here are a few. The Wolf in Sheep's Clothing. Once upon a time, a Wolf decided to disguise the way he looked. He thought it would help him get food more easily. He put on the skin of a sheep, then he went out with the flock into the pasture. Even the shepherd was fooled by his clever costume. In the evening, the shepherd put him in with the rest of the sheep. He closed the gate and made sure it was secure before he went to bed. In the middle of the night, he came back to the fold to get some meat for the next day. Instead of a sheep, though, he grabbed the Wolf, killing him instantly. Those who look to harm others will be harmed themselves. The Bat and the Weasel. A Bat fell on the ground and was caught by a Weasel. It begged the Weasel to spare its life, but the Weasel refused. It told the Bat that birds, by nature, were its enemy. The Bat assured him that it was not a bird, it was a mouse. The Weasel thought a moment, then set it free. A while later, the Bat fell again to the ground, and it was caught by another Weasel. It begged this Weasel not to eat him, either. The Weasel, though, said it did not like mice at all and would eat it. The Bat told the Weasel that it was not a mouse, but a bat. The second Weasel had no good answer, so he let it go. The Bat knew it is always wise to turn events to your advantage. The Lion and the Mouse. A sleeping Lion was woken up by a Mouse running over his face. He got up angrily and caught the scared little Mouse. He was about to kill the Mouse, but it said in its squeaky little voice, "If you would only spare my life, I would be sure to repay your kindness." The Lion laughed at such nonsense, but he let him go. A short time later, though, the Lion was caught by some hunters. They bound him by ropes to the ground. The Mouse recognized his roar, and he rushed over and gnawed the rope with his teeth, setting the Lion free. The Mouse said "You laughed at the idea of my ever being able to help you. Now you know that it is possible for even a small little Mouse to help a great big Lion."`,
+
+    `The word "astronaut" derives from the Greek words meaning "star" and "sailor." These men and women -- Alan Shephard, John Glenn, Jr., Sally Ride, to name a few -- conjure up images of bravery and adventure. They are modern heroes, helping humanity reach for the stars. When the space program began in 1959, there were only seven such people in the entire country. They all were then -- or had been in the past -- in the armed forces. Most of them were test pilots, used to the dangers that came from "pushing the envelope." That was only 36 years ago, and since then much has changed. Today the Americans who make up the shuttle crews are comprised of every race, creed, color, and gender. As of May 2, 1993, 180 men and 21 women astronauts were Caucasian, six men and one woman were African-American, three men and one woman were Hispanic, and two men were of Asian descent. NASA, the National Aeronautics and Space Administration, chooses its astronauts from an increasingly diverse pool of applicants that "looks like America." Thousands of applications come in from all over the world; from these, approximately 100 men and women are chosen for an intensive astronaut candidate training program every two years. "I cannot imagine a better career. I've done more than I could ever have imagined. I'm thankful that I've been at the right place at the right time," says astronaut Kenneth S. Reightler. The training is demanding, but the study time involved is no longer than that of any other professional career requiring graduate/post-graduate study. If becoming an astronaut is a dream, held long and steadfast, then this labor will be one of love. The preparation for becoming an astronaut actually begins in elementary school. "It is here that the foundations are laid down and then built upon," comments Colonel Charlie Bolden, Deputy Commandant of Midshipmen at the U.S. Naval Academy. "Start with the basics and get them down first ... you can't do anything without math and science." At this level, students should read everything they can get their hands on about astronauts and space in general. Later, once they have found a specific field of interest, they can begin to focus on that.`,
+
+    `Snakes are a very specialised group of Reptiles under order Ophidia. Nearly 3,000 species of snakes are now found in the tropical and sub-tropical parts of the world. Out of these about 300 are Poisonous and others are Non-Poisonous. WHO has estimated that thirty to forty thousand people die annually of snake bite. Snakes are not found in New Zealand and Ireland. Snakes are slender and elongated reptiles without limbs, eyelids and external ears. The whole body is covered with epidermal scales and shields. The scales and small and usually overlap each other but the shields are large and join each other by their margins. Shields are prominent on the head. The occipital condyle is single and tripar tite. The lower jaw is attached to the skull with the help of quadrate which articulates in such a movable fashion that the jaw can move laterally and downwards. The two halves, of the lower jaw are loosely articulated. All these are special adaptation for- its peculiar feeding habit. The teeth are conical, recurved backward and fixed on jaw bones. In poisonous snakes two maxillary teeth (one on either side) become enlarged and pointed to form the Fangs. There are two types of fangs—open type and closed type according to the nature of the groove. In poisonous snakes the labial glands have become modified into poison glands and these do not help them in digestion. The tongue is bifid at the apex. Left lung is reduced. Urinary bladder is absent. Most snakes are terrestrial. Few are arboreal and aquatic. There are about 10 species of cobras of which two are found in India. They are Ophiopkagus hanah and Naja bungarus. Cobra is a very poisonous snake. It is usually found in forests. Usual length is 2-3 metres. The colour is black or buff. The hood is well developed. It is supported by long ribs located just behind the head. The hood bears marks like spectacles. In some cobras there are two spectacles marks while in others there is a single spectacles mark. Under the neck there are found 2 or 3 dark belly plates. The fang is open type.`,
+
+    `Science is the investigation of any marvel or thing that can be watched and recorded. The information about that thing or marvel can be sorted out efficiently in predefined rules. Science is wherever around us. We have just barely started to comprehend the laws and the rules that oversee the working of our general surroundings in a manner that can be clarified in normal terms. Everything that can be clarified intelligently can be called science. In the old occasions since science was seen as clarifying a ton of occasions that were viewed as wonders of God, Christianity was against it. It shut down convictions, for example, human development, the earth being the focal point of the universe and so on. Today the life of solaces and facilitate that we live all gratitude to science. Science gets rationale and reasonability to all that occurs around us. As opposed to living in a condition of forecasts and expectation, we can be genuinely sure about how the morrow will spread out. Clinical Science has helped us comprehend the working of the human body. This has empowered the clinical investigations that find medicines making headways on personal satisfaction. The modern world is totally founded on the standards of science. Present-day transport also is an endowment of science whether it is on water, land or air; and these are turning out to be increasingly more progressed with the death of years. Building science has brought to us structures that are utilizing better assets and making them more secure, particularly in regions inclined to quakes, floods, volcanoes and so on. Data Technology as a science is making the trade of data simple and productive, thanks to web and PCs. Veterinary science is helping creatures in having a superior life. They can be dealt with, relieved and given a superior sickness free life.`,
+
+    `Albert Einstein was a German mathematician and physicist who developed the special and general theories of relativity. In 1921, he won the Nobel Prize for physics for his explanation of the photoelectric effect. In the following decade, he immigrated to the U.S. after being targeted by the German Nazi Party. His work also had a major impact on the development of atomic energy. In his later years, Einstein focused on unified field theory. With his passion for inquiry, Einstein is generally considered the most influential physicist of the 20th century. Einstein was born on March 14, 1879, in Ulm, Württemberg, Germany. Einstein grew up in a secular Jewish family. His father, Hermann Einstein, was a salesman and engineer who, with his brother, founded Elektrotechnische Fabrik J. Einstein & Cie, a Munich-based company that mass-produced electrical equipment. Einstein’s mother, the former Pauline Koch, ran the family household. Einstein had one sister, Maja, born two years after him. Einstein attended elementary school at the Luitpold Gymnasium in Munich. However, he felt alienated there and struggled with the institution's rigid pedagogical style. He also had what were considered speech challenges, though he developed a passion for classical music and playing the violin, which would stay with him into his later years. Most significantly, Einstein's youth was marked by deep inquisitiveness and inquiry. Towards the end of the 1880s, Max Talmud, a Polish medical student who sometimes dined with the Einstein family, became an informal tutor to young Einstein. Talmud had introduced his pupil to a children’s science text that inspired Einstein to dream about the nature of light.`
+];
+
+testBtn.addEventListener("click", ()=> {
+    $("#text").innerHTML = paragraphs[Math.floor(Math.random() * paragraphs.length)];
+    window.scrollTo(0, 0);
+    restart();
+    startTime = new Date().getTime();
+    container.style.display = "none";
+    nav.style.display = "none";
+    testContainer.style.display = "block";
+    started = true;
+})
+backBtn.addEventListener("click", ()=> {
+    container.style.display = "block";
+    nav.style.display = "flex";
+    testContainer.style.display = "none";
+})
+$("#result-back-btn").addEventListener("click", () => {
+    $(".result-container").style.display = "none";
+    container.style.display = "block";
+    nav.style.display = "flex";
+})
+
+
+
+function showPreviousResult() {
+    let html = "";
+    let testResult = localStorage.getItem("testResult");
+    let data = [];
+
+    if (testResult != null) {
+        data = JSON.parse(testResult);
+
+
+        data.forEach(result => {
+            html +=
+            `
+            <div class="previous-result-card">
+            <div class="previous-result-date">${result.date}</div>
+            <div class="previous-result-progress-box">
+            <div class="previous-result-progress">
+            <svg>
+            <circle cx="70" cy="70" r="70"></circle>
+            <circle cx="70" cy="70" r="70" style="stroke-dashoffset: ${440 - (result.accuracy/100 * 440)};"></circle>
+            </svg>
+            <div class="previous-result-progress-percent">${result.accuracy}<span>%</span></div>
+            </div>
+            <h2 class="previous-result-progress-text">Accuracy</h2>
+            </div>
+
+            <div class="previous-result-box">
+            <p>${result.gross}<span>wpm</span></p>
+            <p>Gross Speed</p>
+            </div>
+            <div class="previous-result-box">
+            <p>${result.net}<span>wpm</span></p>
+            <p>Net Speed</p>
+            </div>
+            <div class="previous-result-box">
+            <p>${result.time}</p>
+            <p>Time</p>
+            </div>
+            <div class="previous-result-box">
+            <p>${result.characters}</p>
+            <p>Characters</p>
+            </div>
+            <div class="previous-result-box">
+            <p>${result.words}</p>
+            <p>Words</p>
+            </div>
+            </div>
+            `;
+        })
+
+        $(".previous-result-cards").innerHTML = html;
+    } else {
+        html =
+        `
+        <p class="message">
+        <b>Nothing to show here!</b> Please complete some quick typing test to show here.
+        </p>
+        `;
+
+        $(".previous-result-cards").innerHTML = html;
+    }
+}
+
+
+
+let timeElm = $("#time");
+let min, sec;
+let started = false, showedResult = false;
+let startTime = 0, endTime = 0, time = 0;
+
+function printTime() {
+    min < 10 ? min = "0"+min: min = min;
+    sec < 10 ? sec = "0"+sec: sec = sec;
+    timeElm.innerHTML = `${min}:${sec}`;
+}
+printTime();
+
+function restart() {
+    min = 5;
+    sec = 0;
+    printTime();
+    showedResult = false;
+    startTime = 0;
+    endTime = 0;
+    time = 0;
+    $("#input").value = "";
+}
+
+
+function decreaseTime() {
+    if (started) {
+        if (timeElm.innerHTML != "00:00") {
+            if (sec > 0) {
+                sec -= 1;
+            } else {
+                min -= 1;
+                sec = 59;
+                min < 10 ? min = "0" + min: min = min;
+            }
+
+            sec < 10 ? sec = "0" + sec: sec = sec;
+            timeElm.innerHTML = `${min}:${sec}`;
+        } else {
+            if (!showedResult) {
+                result();
+            }
+        }
+    }
+}
+
+setInterval(decreaseTime, 1000);
+
+
+function result() {
+    showedResult = true;
+    endTime = new Date().getTime();
+
+    seconds = (endTime - startTime)/1000;
+    minutes = seconds/60;
+
+    m = Math.floor(seconds/60);
+    s = Math.floor(seconds - m * 60);
+    m < 10 ? m = "0"+m: m = m;
+    s < 10 ? s = "0"+s: s = s;
+
+    let original = $("#text").innerHTML.split(" ");
+    let typed = $("#input").value.split(" ");
+    let correct = 0,
+    incorrect = 0;
+    typed.forEach((w, i) => {
+        if (w == original[i]) {
+            correct += 1;
+        } else {
+            incorrect += 1;
+        }
+    })
+
+
+
+    characters = $("#input").value.length;
+    words = Math.round(characters/5);
+    gross = Math.round((characters/5)/minutes);
+    net = Math.round(gross - (incorrect/minutes));
+    accuracy = Math.round((net / gross) * 100);
+
+    // Date
+    let today = new Date();
+    let date = today.getDate();
+
+    let monthsName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    let month = monthsName[today.getMonth()];
+    let year = today.getFullYear();
+
+    let sec = today.getSeconds();
+    let min = today.getMinutes();
+    let hour = today.getHours();
+
+
+    sec < 10 ? sec = "0"+sec: sec = sec;
+    min < 10 ? min = "0"+min: min = min;
+    hour < 10 ? hour = "0"+hour: hour = hour;
+
+
+
+    let data = {
+        date: `${date} ${month} ${year}, ${hour}:${min}:${sec}`,
+        time: `${m}:${s}`,
+        characters: characters,
+        words: words,
+        gross: gross,
+        net: net,
+        accuracy: accuracy
+    };
+
+    // local storage
+    /*let testResult = localStorage.getItem("testResult");
+    let array = [];
+
+    if (testResult == null) {
+        array = [];
+    } else {
+        array = JSON.parse(testResult);
+    }
+
+    array.push(data);
+
+    localStorage.setItem("testResult", JSON.stringify(array));
+*/
+
+
+    window.scrollTo(0, 0);
+    testContainer.style.display = "none";
+    $(".result-container").style.display = "block";
+
+    if (data.accuracy < 0) {
+        data.accuracy = 0;
+    }
+    $(".progress-percent").innerHTML = `${data.accuracy}<span>%</span>`;
+    $("#progress-circle").style.strokeDashoffset = `${440 - (data.accuracy/100 * 440)}`;
+
+
+    $("#grossSpeed").innerHTML = `${data.gross}<span>wpm</span>`;
+    $("#netSpeed").innerHTML = `${data.net}<span>wpm</span>`;
+    $("#resultTime").innerHTML = data.time;
+    $("#result-characters").innerHTML = data.characters;
+    $("#result-words").innerHTML = data.words;
+}
+
+$("#continueBtn").addEventListener("click", result);
+    
+    
+    
+
+const canvas = $("canvas");
+const ctx = canvas.getContext("2d");
+canvas.width = 300;
+canvas.height = 250;
+
+let speedY = 0.6;
+
+class Wall {
+    constructor(x, y, w, h, col) {
+        this.x = x;
+        this.y = y;
+        this.w = w;
+        this.h = h;
+        this.col = col;
+    }
+    draw() {
+        ctx.fillStyle = this.col;
+        ctx.fillRect(this.x, this.y, this.w, this.h);
+    }
+    update() {
+        this.draw();
+    }
+}
+
+class Block {
+    constructor(x, y, w, h, col, word) {
+        this.x = x;
+        this.y = y;
+        this.w = w;
+        this.h = h;
+        this.col = col;
+        this.vel = {
+            x: 0,
+            y: speedY
+        };
+        this.word = word;
+        this.active = true;
+    }
+    draw() {
+        ctx.fillStyle = this.col;
+        ctx.fillRect(this.x, this.y, this.w, this.h);
+
+        ctx.fillStyle = "#fff";
+        ctx.font = "16px Arial";
+        ctx.textAlign = "center";
+        ctx.fillText(this.word, canvas.width/2, this.y + this.h - 4);
+    }
+    update() {
+        this.draw();
+        this.x += this.vel.x;
+        this.y += this.vel.y;
+    }
+}
+
+// Wall
+let dis = 80;
+wall1 = new Wall(canvas.width/2 - dis, 100, 10, 100, "#08f");
+wall2 = new Wall(canvas.width/2 + dis - wall1.w, wall1.y, wall1.w, wall1.h, wall1.col);
+wall3 = new Wall(wall1.x, wall1.y + wall1.h, wall2.x - wall1.x + wall1.w, wall1.w, wall1.col);
+
+// blocks
+let blocks = [];
+let collisionY = wall3.y;
+let lastLetter = null, currentBlock = null;
+let score = 0;
+let gameOver = false;
+
+function createBlock() {
+    let words = [
+        "Abandon",
+        "Ability",
+        "Able",
+        "Abortion",
+        "About",
+        "Above",
+        "Abroad",
+        "Absence",
+        "Absolute",
+        "Absolutely",
+        "Absorb",
+        "Abuse",
+        "Academic",
+        "Accept",
+        "Access",
+        "Accident",
+        "Accompany",
+        "Accomplish",
+        "According",
+        "Account",
+        "Accurate",
+        "Accuse",
+        "Achieve",
+        "Achievement",
+        "Acid",
+        "Acknowledge",
+        "Acquire",
+        "Across",
+        "Act",
+        "This",
+        "Action",
+        "Active",
+        "Activist",
+        "Activity",
+        "Actor",
+        "Actress",
+        "Actual",
+        "Actually",
+        "Ad",
+        "Adapt",
+        "Add",
+        "Addition",
+        "Additional",
+        "Address",
+        "Adequate",
+        "Adjust",
+        "Adjustment",
+        "Administration",
+        "Administrator",
+        "Admire",
+        "Admission",
+        "Admit",
+        "Adolescent",
+        "Adopt",
+        "Adult",
+        "Advance",
+        "Advanced",
+        "Advantage",
+        "Adventure",
+        "Advertising",
+        "Advice",
+        "Advise",
+        "Adviser",
+        "Advocate",
+        "Affair",
+        "Affect",
+        "Afford",
+        "Afraid",
+        "African",
+        "African-American",
+        "After",
+        "Afternoon",
+        "Again",
+        "Against",
+        "Age",
+        "Agency",
+        "Agenda",
+        "Agent",
+        "Aggressive",
+        "Ago",
+        "Agree",
+        "Agreement",
+        "Agricultural",
+        "Ah",
+        "Ahead",
+        "Aid",
+        "Aide",
+        "AIDS",
+        "Aim",
+        "Air",
+        "Aircraft",
+        "Airline",
+        "Airport",
+        "Album",
+        "Alcohol",
+        "Alive",
+        "All",
+        "Alliance",
+        "Allow",
+        "Ally",
+        "Almost",
+        "Alone",
+        "Along",
+        "Already",
+        "Also",
+        "Alter",
+        "Alternative",
+        "Although",
+        "Always",
+        "AM",
+        "Amazing",
+        "American",
+        "Among",
+        "Amount",
+        "Analysis",
+        "Analyst",
+        "Analyze",
+        "Ancient",
+        "And",
+        "Anger",
+        "Angle",
+        "Angry",
+        "Animal",
+        "Anniversary",
+        "Announce",
+        "Annual",
+        "Another",
+        "Answer",
+        "Anticipate",
+        "Anxiety",
+        "Any",
+        "Anybody",
+        "Anymore",
+        "Anyone",
+        "Anything",
+        "Anyway",
+        "Anywhere",
+        "Apart",
+        "Apartment",
+        "Apparent",
+        "Apparently",
+        "Appeal",
+        "Appear",
+        "Appearance",
+        "Apple",
+        "Application",
+        "Apply",
+        "Appoint",
+        "Appointment",
+        "Appreciate",
+        "Approach",
+        "Appropriate",
+        "Approval",
+        "Approve",
+        "Approximately",
+        "Arab",
+        "Architect",
+        "Area",
+        "Argue",
+        "Argument",
+        "Arise",
+        "Arm",
+        "Armed",
+        "Army",
+        "Around",
+        "Arrange",
+        "Arrangement",
+        "Arrest",
+        "Arrival",
+        "Arrive",
+        "Art",
+        "Article",
+        "Artist",
+        "Artistic",
+        "As",
+        "Asian",
+        "Aside",
+        "Ask",
+        "Asleep",
+        "Aspect",
+        "Assault",
+        "Assert",
+        "Assess",
+        "Assessment",
+        "Asset",
+        "Assign",
+        "Assignment",
+        "Assist",
+        "Assistance",
+        "Assistant",
+        "Associate",
+        "Association",
+        "Assume",
+        "Assumption",
+        "Assure",
+        "At",
+        "Athlete",
+        "Athletic",
+        "Atmosphere",
+        "Attach",
+        "Attack",
+        "Attempt",
+        "Attend",
+        "Attention",
+        "Attitude",
+        "Attorney",
+        "Attract",
+        "Attractive",
+        "Attribute",
+        "Audience",
+        "Author",
+        "Authority",
+        "Auto",
+        "Available",
+        "Average",
+        "Avoid",
+        "Award",
+        "Aware",
+        "Awareness",
+        "Away",
+        "Awful",
+        "Baby",
+        "Back",
+        "Background",
+        "Bad",
+        "Badly",
+        "Bag",
+        "Bake",
+        "Balance",
+        "Ball",
+        "Ban",
+        "Band",
+        "Bank",
+        "Bar",
+        "Barely",
+        "Barrel",
+        "Barrier",
+        "Base",
+        "Baseball",
+        "Basic",
+        "Basically",
+        "Basis",
+        "Basket",
+        "Basketball",
+        "Bathroom",
+        "Battery",
+        "Battle",
+        "Be",
+        "Beach",
+        "Bean",
+        "Bear",
+        "Beat",
+        "Beautiful",
+        "Beauty",
+        "Because",
+        "Become",
+        "Bed",
+        "Bedroom",
+        "Beer",
+        "Before",
+        "Begin",
+        "Beginning",
+        "Behavior",
+        "Behind",
+        "Being",
+        "Belief",
+        "Believe",
+        "Bell",
+        "Belong",
+        "Below",
+        "Belt",
+        "Bench",
+        "Bend",
+        "Beneath",
+        "Benefit",
+        "Beside",
+        "Besides",
+        "Best",
+        "Bet",
+        "Better",
+        "Between",
+        "Beyond",
+        "Bible",
+        "Big",
+        "Bike",
+        "Bill",
+        "Billion",
+        "Bind",
+        "Biological",
+        "Bird",
+        "Birth",
+        "Birthday",
+        "Bit",
+        "Bite",
+        "Black",
+        "Blade",
+        "Blame",
+        "Blanket",
+        "Blind",
+        "Block",
+        "Blood",
+        "Blow",
+        "Blue",
+        "Board",
+        "Boat",
+        "Body",
+        "Bomb",
+        "Bombing",
+        "Bond",
+        "Bone",
+        "Book",
+        "Boom",
+        "Boot",
+        "Border",
+        "Born",
+        "Borrow",
+        "Boss",
+        "Both",
+        "Bother",
+        "Bottle",
+        "Bottom",
+        "Boundary",
+        "Bowl",
+        "Box",
+        "Boy",
+        "Boyfriend",
+        "Brain",
+        "Branch",
+        "Brand",
+        "Bread",
+        "Break",
+        "Breakfast",
+        "Breast",
+        "Breath",
+        "Breathe",
+        "Brick",
+        "Bridge",
+        "Brief",
+        "Briefly",
+        "Bright",
+        "Brilliant",
+        "Bring",
+        "British",
+        "Broad",
+        "Broken",
+        "Brother",
+        "Brown",
+        "Brush",
+        "Buck",
+        "Budget",
+        "Build",
+        "Building",
+        "Bullet",
+        "Bunch",
+        "Burden",
+        "Burn",
+        "Bury",
+        "Bus",
+        "Business",
+        "Busy",
+        "But",
+        "Butter",
+        "Button",
+        "Buy",
+        "Buyer",
+        "By",
+        "Cabin",
+        "Cabinet",
+        "Cable",
+        "Cake",
+        "Calculate",
+        "Call",
+        "Camera",
+        "Camp",
+        "Campaign",
+        "Campus",
+        "Can",
+        "Canadian",
+        "Cancer",
+        "Candidate",
+        "Cap",
+        "Capability",
+        "Capable",
+        "Capacity",
+        "Capital",
+        "Captain",
+        "Capture",
+        "Car",
+        "Carbon",
+        "Card",
+        "Care",
+        "Career",
+        "Careful",
+        "Carefully",
+        "Carrier",
+        "Carry",
+        "Case",
+        "Cash",
+        "Cast",
+        "Cat",
+        "Catch",
+        "Category",
+        "Catholic",
+        "Cause",
+        "Ceiling",
+        "Celebrate",
+        "Celebration",
+        "Celebrity",
+        "Cell",
+        "Center",
+        "Central",
+        "Century",
+        "CEO",
+        "Ceremony",
+        "Certain",
+        "Certainly",
+        "Chain",
+        "Chair",
+        "Chairman",
+        "Challenge",
+        "Chamber",
+        "Champion",
+        "Championship",
+        "Chance",
+        "Change",
+        "Changing",
+        "Channel",
+        "Chapter",
+        "Character",
+        "Characteristic",
+        "Characterize",
+        "Charge",
+        "Charity",
+        "Chart",
+        "Chase",
+        "Cheap",
+        "Check",
+        "Cheek",
+        "Cheese",
+        "Chef",
+        "Chemical",
+        "Chest",
+        "Chicken",
+        "Chief",
+        "Child",
+        "Childhood",
+        "Chinese",
+        "Chip",
+        "Chocolate",
+        "Choice",
+        "Cholesterol",
+        "Choose",
+        "Christian",
+        "Christmas",
+        "Church",
+        "Cigarette",
+        "Circle",
+        "Circumstance",
+        "Cite",
+        "Citizen",
+        "City",
+        "Civil",
+        "Civilian",
+        "Claim",
+        "Class",
+        "Classic",
+        "Classroom",
+        "Clean",
+        "Clear",
+        "Clearly",
+        "Client",
+        "Climate",
+        "Climb",
+        "Clinic",
+        "Clinical",
+        "Clock",
+        "Close",
+        "Closely",
+        "Closer",
+        "Clothes",
+        "Clothing",
+        "Cloud",
+        "Club",
+        "Clue",
+        "Cluster",
+        "Coach",
+        "Coal",
+        "Coalition",
+        "Coast",
+        "Coat",
+        "Code",
+        "Coffee",
+        "Cognitive",
+        "Cold",
+        "Collapse",
+        "Colleague",
+        "Collect",
+        "Collection",
+        "Collective",
+        "College",
+        "Colonial","Color","Column","Combination","Combine","Come","Comedy","Comfort","Comfortable","Command","Commander","Comment","Commercial","Commission","Commit","Commitment","Committee","Common","Communicate","Communication","Community","Company","Compare","Comparison","Compete","Competition","Competitive","Competitor","Complain","Complaint","Complete","Completely","Complex","Complicated","Component","Compose","Composition","Comprehensive","Computer","Concentrate","Concentration","Concept","Concern","Concerned","Concert","Conclude","Conclusion","Concrete","Condition","Conduct","Conference","Confidence","Confident","Confirm","Conflict","Confront","Confusion","Congress","Congressional","Connect","Connection","Consciousness","Consensus","Consequence","Conservative","Consider","Considerable","Consideration","Consist","Consistent","Constant","Constantly","Constitute","Constitutional","Construct","Construction","Consultant","Consume","Consumer","Consumption","Contact","Contain","Container","Contemporary","Content","Contest","Context","Continue","Continued","Contract","Contrast","Contribute","Contribution","Control","Controversial","Controversy","Convention","Conventional","Conversation","Convert","Conviction","Convince","Cook","Cookie","Cooking","Cool","Cooperation","Cop","Cope","Copy","Core","Corn","Corner","Corporate","Corporation","Correct","Correspondent","Cost","Cotton","Couch","Could","Council","Counselor","Count","Counter","Country","County","Couple","Courage","Course","Court","Cousin","Cover","Coverage","Cow","Crack","Craft","Crash","Crazy","Cream","Create","Creation","Creative","Creature","Credit","Crew","Crime","Criminal","Crisis","Criteria","Critic","Critical","Criticism","Criticize","Crop","Cross","Crowd","Crucial","Cry","Cultural","Culture","Cup","Curious","Current","Currently","Curriculum","Custom","Customer","Cut","Cycle","Dad","Daily","Damage","Dance","Danger","Dangerous","Dare","Dark","Darkness","Data","Date","Daughter","Day","Dead","Deal","Dealer","Dear","Death","Debate","Debt","Decade","Decide","Decision","Deck","Declare","Decline","Decrease","Deep","Deeply","Deer","Defeat","Defend","Defendant","Defense","Defensive","Deficit","Define","Definitely","Definition","Degree","Delay","Deliver","Delivery","Demand","Democracy","Democrat","Democratic","Demonstrate","Demonstration","Deny","Department","Depend","Dependent","Depending","Depict","Depression","Depth","Deputy","Derive","Describe","Description","Desert","Deserve","Design","Designer","Desire","Desk","Desperate","Despite","Destroy","Destruction","Detail","Detailed","Detect","Determine","Develop","Developing","Development","Device","Devote","Dialogue","Die","Diet","Differ","Difference","Different","Differently","Difficult","Difficulty","Dig","Digital","Dimension","Dining","Dinner","Direct","Direction","Directly","Director","Dirt","Dirty","Disability","Disagree","Disappear","Disaster","Discipline","Discourse","Discover","Discovery","Discrimination","Discuss","Discussion","Disease","Dish","Dismiss","Disorder","Display","Dispute","Distance","Distant","Distinct","Distinction","Distinguish","Distribute","Distribution","District","Diverse","Diversity","Divide","Division","Divorce","DNA","Do","Doctor","Document","Dog","Domestic","Dominant","Dominate","Door","Double","Doubt","Down","Downtown","Dozen","Draft","Drag","Drama","Dramatic","Dramatically","Draw","Drawing","Dream","Dress","Drink","Drive","Driver","Drop","Drug","Dry","Due","During","Dust","Duty","Each","Eager","Ear","Early","Earn","Earnings","Earth","Ease","Easily","East","Eastern","Easy","Eat","Economic","Economics","Economist","Economy","Edge","Edition","Editor","Educate","Education","Educational","Educator","Effect","Effective","Effectively","Efficiency","Efficient","Effort","Egg","Eight","Either","Elderly","Elect","Election","Electric","Electricity","Electronic","Element","Elementary","Eliminate","Elite","Else","Elsewhere","E-mail","Embrace","Emerge","Emergency","Emission","Emotion","Emotional","Emphasis","Emphasize","Employ","Employee","Employer","Employment","Empty","Enable","Encounter","Encourage","End","Enemy","Energy","Enforcement","Engage","Engine","Engineer","Engineering","English","Enhance","Enjoy","Enormous","Enough","Ensure","Enter","Enterprise","Entertainment","Entire","Entirely","Entrance","Entry","Environment","Environmental","Episode","Equal","Equally","Equipment","Era","Error","Escape","Especially","Essay","Essential","Essentially","Establish","Establishment","Estate","Estimate","Etc","Ethics","Ethnic","European","Evaluate","Evaluation","Even","Evening","Event","Eventually","Ever","Every","Everybody","Everyday","Everyone","Everything","Everywhere","Evidence","Evolution","Evolve","Exact","Exactly","Examination","Examine","Example","Exceed","Excellent","Except","Exception","Exchange","Exciting","Executive","Exercise","Exhibit","Exhibition","Exist","Existence","Existing","Expand","Expansion","Expect","Expectation","Expense","Expensive","Experience","Experiment","Expert","Explain","Explanation","Explode","Explore","Explosion","Expose","Exposure","Express","Expression","Extend","Extension","Extensive","Extent","External","Extra","Extraordinary","Extreme","Extremely","Eye","Fabric","Face","Facility","Fact","Factor","Factory","Faculty","Fade","Fail","Failure","Fair","Fairly","Faith","Fall","False","Familiar","Family","Famous","Fan","Fantasy","Far","Farm","Farmer","Fashion","Fast","Fat","Fate","Father","Fault","Favor","Favorite","Fear","Feature","Federal","Fee","Feed","Feel","Feeling","Fellow","Female","Fence","Few","Fewer","Fiber","Fiction","Field","Fifteen","Fifth","Fifty","Fight","Fighter","Fighting","Figure","File","Fill","Film","Final","Finally","Finance","Financial","Find","Finding","Fine","Finger","Finish","Fire","Firm","First","Fish","Fishing","Fit","Fitness","Five","Fix","Flag","Flame","Flat","Flavor","Flee","Flesh","Flight","Float","Floor","Flow","Flower","Fly","Focus","Folk","Follow","Following","Food","Foot","Football","For","Force","Foreign","Forest","Forever","Forget","Form","Formal","Formation","Former","Formula","Forth","Fortune","Forward","Found","Foundation","Founder","Four","Fourth","Frame","Framework","Free","Freedom","Freeze","French","Frequency","Frequent","Frequently","Fresh","Friend","Friendly","Friendship","From","Front","Fruit","Frustration","Fuel","Full","Fully","Fun","Function","Fund","Fundamental","Funding","Funeral","Funny","Furniture","Furthermore","Future","Gain","Galaxy","Gallery","Game","Gang","Gap","Garage","Garden","Garlic","Gas","Gate","Gather","Gay","Gaze","Gear","Gender","Gene","General","Generally","Generate","Generation","Genetic","Gentleman","Gently","German","Gesture","Get","Ghost","Giant","Gift","Gifted","Girl","Girlfriend","Give","Given","Glad","Glance","Glass","Global","Glove","Go","Goal","God","Gold","Golden","Golf","Good","Government","Governor","Grab","Grade","Gradually","Graduate","Grain","Grand","Grandfather","Grandmother","Grant","Grass","Grave","Gray","Great","Greatest","Green","Grocery","Ground","Group","Grow","Growing","Growth","Guarantee","Guard","Guess","Guest","Guide","Guideline","Guilty","Gun","Guy","Habit","Habitat","Hair","Half","Hall","Hand","Handful","Handle","Hang","Happen","Happy","Hard","Hardly","Hat","Hate","Have","He","Head","Headline","Headquarters","Health","Healthy","Hear","Hearing","Heart","Heat","Heaven","Heavily","Heavy","Heel","Height","Helicopter","Hell","Hello","Help","Helpful","Her","Here","Heritage","Hero","Herself","Hey","Hi","Hide","High","Highlight","Highly","Highway","Hill","Him","Himself","Hip","Hire","His","Historian","Historic","Historical","History","Hit","Hold","Hole","Holiday","Holy","Home","Homeless","Honest","Honey","Honor","Hope","Horizon","Horror","Horse","Hospital","Host","Hot","Hotel","Hour","House","Household","Housing","How","However","Huge","Human","Humor","Hundred","Hungry","Hunter","Hunting","Hurt","Husband","Hypothesis","I","Ice","Idea","Ideal","Identification","Identify","Identity","Ie","If","Ignore","Ill","Illegal","Illness","Illustrate","Image","Imagination","Imagine","Immediate","Immediately","Immigrant","Immigration","Impact","Implement","Implication","Imply","Importance","Important","Impose","Impossible","Impress","Impression","Impressive","Improve","Improvement","In","Incentive","Incident","Include","Including","Income","Incorporate","Increase","Increased","Increasing","Increasingly","Incredible","Indeed","Independence","Independent","Index","Indian","Indicate","Indication","Individual","Industrial","Industry","Infant","Infection","Inflation","Influence","Inform","Information","Ingredient","Initial","Initially","Initiative","Injury","Inner","Innocent","Inquiry","Inside","Insight","Insist","Inspire","Install","Instance","Instead","Institution","Institutional","Instruction","Instructor","Instrument","Insurance","Intellectual","Intelligence","Intend","Intense","Intensity","Intention","Interaction","Interest","Interested","Interesting","Internal","International","Internet","Interpret","Interpretation","Intervention","Interview","Into","Introduce","Introduction","Invasion","Invest","Investigate","Investigation","Investigator","Investment","Investor","Invite","Involve","Involved","Involvement","Iraqi","Irish","Iron","Islamic","Island","Israeli","Issue","It","Italian","Item","Its","Itself","Jacket","Jail","Japanese","Jet","Jew","Jewish","Job","Join","Joint","Joke","Journal","Journalist","Journey","Joy","Judge","Judgment","Juice","Jump","Junior","Jury","Just","Justice","Justify","Keep","Key","Kick","Kid","Kill","Killer","Killing","Kind","King","Kiss","Kitchen","Knee","Knife","Knock","Know","Knowledge","Lab","Label","Labor","Laboratory","Lack","Lady","Lake","Land","Landscape","Language","Lap","Large","Largely","Last","Late","Later","Latin","Latter","Laugh","Launch","Law","Lawn","Lawsuit","Lawyer","Lay","Layer","Lead","Leader","Leadership","Leading","Leaf","League","Lean","Learn","Learning","Least","Leather","Leave","Left","Leg","Legacy","Legal","Legend","Legislation","Legitimate","Lemon","Length","Less","Lesson","Let","Letter","Level","Liberal","Library","License","Lie","Life","Lifestyle","Lifetime","Lift","Light","Like","Likely","Limit","Limitation","Limited","Line","Link","Lip","List","Listen","Literally","Literary","Literature","Little","Live","Living","Load","Loan","Local","Locate","Location","Lock","Long","Long-term","Look","Loose","Lose","Loss","Lost","Lot","Lots","Loud","Love","Lovely","Lover","Low","Lower","Luck","Lucky","Lunch","Lung","Machine","Mad","Magazine","Mail","Main","Mainly","Maintain","Maintenance","Major","Majority","Make","Maker","Makeup","Male","Mall","Man","Manage","Management","Manager","Manner","Manufacturer","Manufacturing","Many","Map","Margin","Mark","Market","Marketing","Marriage","Married","Marry","Mask","Mass","Massive","Master","Match","Material","Math","Matter","May","Maybe","Mayor","Me","Meal","Mean","Meaning","Meanwhile","Measure","Measurement","Meat","Mechanism","Media","Medical","Medication","Medicine","Medium","Meet","Meeting","Member","Membership","Memory","Mental","Mention","Menu","Mere","Merely","Mess","Message","Metal","Meter","Method","Mexican","Middle","Might","Military","Milk","Million","Mind","Mine","Minister","Minor","Minority","Minute","Miracle","Mirror","Miss","Missile","Mission","Mistake","Mix","Mixture","Mm-hmm","Mode","Model","Moderate","Modern","Modest","Mom","Moment","Money","Monitor","Month","Mood","Moon","Moral","More","Moreover","Morning","Mortgage","Most","Mostly","Mother","Motion","Motivation","Motor","Mount","Mountain","Mouse","Mouth","Move","Movement","Movie","Mr","Mrs","Ms","Much","Multiple","Murder","Muscle","Museum","Music","Musical","Musician","Muslim","Must","Mutual","My","Myself","Mystery","Myth","Naked","Name","Narrative","Narrow","Nation","National","Native","Natural","Naturally","Nature","Near","Nearby","Nearly","Necessarily","Necessary","Neck","Need","Negative","Negotiate","Negotiation","Neighbor","Neighborhood","Neither","Nerve","Nervous","Net","Network","Never","Nevertheless","New","Newly","News","Newspaper","Next","Nice","Night","Nine","No","Nobody","Nod","Noise","Nomination","None","Nonetheless","Nor","Normal","Normally","North","Northern","Nose","Not","Note","Nothing","Notice","Notion","Novel","Now","Nowhere","N't","Nuclear","Number","Numerous","Nurse","Nut","Object","Objective","Obligation","Observation","Observe","Observer","Obtain","Obvious","Obviously","Occasion","Occasionally","Occupation","Occupy","Occur","Ocean","Odd","Odds","Of","Off","Offense","Offensive","Offer","Office","Officer","Official","Often","Oh","Oil","Ok","Okay","Old","Olympic","On","Once","One","Ongoing","Onion","Online","Only","Onto","Open","Opening","Operate","Operating","Operation","Operator","Opinion","Opponent","Opportunity","Oppose","Opposite","Opposition","Option","Or","Orange","Order","Ordinary","Organic","Organization","Organize","Orientation","Origin","Original","Originally","Other","Others","Otherwise","Ought","Our","Ourselves","Out","Outcome","Outside","Oven","Over","Overall","Overcome","Overlook","Owe","Own","Owner","Pace","Pack","Package","Page","Pain","Painful","Paint","Painter","Painting","Pair","Pale","Palestinian","Palm","Pan","Panel","Pant","Paper","Parent","Park","Parking","Part","Participant","Participate","Participation","Particular","Particularly","Partly","Partner","Partnership","Party","Pass","Passage","Passenger","Passion","Past","Patch","Path","Patient","Pattern","Pause","Pay","Payment","PC","Peace","Peak","Peer","Penalty","People","Pepper","Per","Perceive","Percentage","Perception","Perfect","Perfectly","Perform","Performance","Perhaps","Period","Permanent","Permission","Permit","Person","Personal","Personality","Personally","Personnel","Perspective","Persuade","Pet","Phase","Phenomenon","Philosophy","Phone","Photo","Photograph","Photographer","Phrase","Physical","Physically","Physician","Piano","Pick","Picture","Pie","Piece","Pile","Pilot","Pine","Pink","Pipe","Pitch","Place","Plan","Plane","Planet","Planning","Plant","Plastic","Plate","Platform","Play","Player","Please","Pleasure","Plenty","Plot","Plus","PM","Pocket","Poem","Poet","Poetry","Point","Pole","Police","Policy","Political","Politically","Politician","Politics","Poll","Pollution","Pool","Poor","Pop","Popular","Population","Porch","Port","Portion","Portrait","Portray","Pose","Position","Positive","Possess","Possibility","Possible","Possibly","Post","Pot","Potato","Potential","Potentially","Pound","Pour","Poverty","Powder","Power","Powerful","Practical","Practice","Pray","Prayer","Precisely","Predict","Prefer","Preference","Pregnancy","Pregnant","Preparation","Prepare","Prescription","Presence","Present","Presentation","Preserve","President","Presidential","Press","Pressure","Pretend","Pretty","Prevent","Previous","Previously","Price","Pride","Priest","Primarily","Primary","Prime","Principal","Principle","Print","Prior","Priority","Prison","Prisoner","Privacy","Private","Probably","Problem","Procedure","Proceed","Process","Produce","Producer","Product","Production","Profession","Professional","Professor","Profile","Profit","Program","Progress","Project","Prominent","Promise","Promote","Prompt","Proof","Proper","Properly","Property","Proportion","Proposal","Propose","Proposed","Prosecutor","Prospect","Protect","Protection","Protein","Protest","Proud","Prove","Provide","Provider","Province","Provision","Psychological","Psychologist","Psychology","Public","Publication","Publicly","Publish","Publisher","Pull","Punishment","Purchase","Pure","Purpose","Pursue","Push","Put","Qualify","Quality","Quarter","Quarterback","Question","Quick","Quickly","Quiet","Quietly","Quit","Quite","Quote","Race","Racial","Radical","Radio","Rail","Rain","Raise","Range","Rank","Rapid","Rapidly","Rare","Rarely","Rate","Rather","Rating","Ratio","Raw","Reach","React","Reaction","Read","Reader","Reading","Ready","Real","Reality","Realize","Really","Reason","Reasonable","Recall","Receive","Recent","Recently","Recipe","Recognition","Recognize","Recommend","Recommendation","Record","Recording","Recover","Recovery","Recruit","Red","Reduce","Reduction","Refer","Reference","Reflect","Reflection","Reform","Refugee","Refuse","Regard","Regarding","Regardless","Regime","Region","Regional","Register","Regular","Regularly","Regulate","Regulation","Reinforce","Reject","Relate","Relation","Relationship","Relative","Relatively","Relax","Release","Relevant","Relief","Religion","Religious","Rely","Remain","Remaining","Remarkable","Remember","Remind","Remote","Remove","Repeat","Repeatedly","Replace","Reply","Report","Reporter","Represent","Representation","Representative","Republican","Reputation","Request","Require","Requirement","Research","Researcher","Resemble","Reservation","Resident","Resist","Resistance","Resolution","Resolve","Resort","Resource","Respect","Respond","Respondent","Response","Responsibility","Responsible","Rest","Restaurant","Restore","Restriction","Result","Retain","Retire","Retirement","Return","Reveal","Revenue","Review","Revolution","Rhythm","Rice","Rich","Rid","Ride","Rifle","Right","Ring","Rise","Risk","River","Road","Rock","Role","Roll","Romantic","Roof","Room","Root","Rope","Rose","Rough","Roughly","Round","Route","Routine","Row","Rub","Rule","Run","Running","Rural","Rush","Russian","Sacred","Sad","Safe","Safety","Sake","Salad","Salary","Sale","Sales","Salt","Same","Sample","Sanction","Sand","Satellite","Satisfaction","Satisfy","Sauce","Save","Saving","Say","Scale","Scandal","Scared","Scenario","Scene","Schedule","Scheme","Scholar","Scholarship","School","Science","Scientific","Scientist","Scope","Score","Scream","Screen","Script","Sea","Search","Season","Seat","Second","Secret","Secretary","Section","Sector","Secure","Security","See","Seed","Seek","Seem","Segment","Seize","Select","Selection","Self","Sell","Senate","Senator","Send","Senior","Sense","Sensitive","Sentence","Separate","Sequence","Series","Serious","Seriously","Serve","Service","Session","Set","Setting","Settle","Settlement","Seven","Several","Severe","Sex","Sexual","Shade","Shadow","Shake","Shall","Shape","Share","Sharp","She","Sheet","Shelf","Shell","Shelter","Shift","Shine","Ship","Shirt","Shit","Shock","Shoe","Shoot","Shooting","Shop","Shopping","Shore","Short","Shortly","Shot","Should","Shoulder","Shout","Show","Shower","Shrug","Shut","Sick","Side","Sigh","Sight","Sign","Signal","Significance","Significant","Significantly","Silence","Silent","Silver","Similar","Similarly","Simple","Simply","Sin","Since","Sing","Singer","Single","Sink","Sir","Sister","Sit","Site","Situation","Six","Size","Ski","Skill","Skin","Sky","Slave","Sleep","Slice","Slide","Slight","Slightly","Slip","Slow","Slowly","Small","Smart","Smell","Smile","Smoke","Smooth","Snap","Snow","So","So-called","Soccer","Social","Society","Soft","Software","Soil","Solar","Soldier","Solid","Solution","Solve","Some","Somebody","Somehow","Someone","Something","Sometimes","Somewhat","Somewhere","Son","Song","Soon","Sophisticated","Sorry","Sort","Soul","Sound","Soup","Source","South","Southern","Soviet","Space","Spanish","Speak","Speaker","Special","Specialist","Species","Specific","Specifically","Speech","Speed","Spend","Spending","Spin","Spirit","Spiritual","Split","Spokesman","Sport","Spot","Spread","Spring","Square","Squeeze","Stability","Stable","Staff","Stage","Stair","Stake","Stand","Standard","Standing","Star","Stare","Start","State","Statement","Station","Statistics","Status","Stay","Steady","Steal","Steel","Step","Stick","Still","Stir","Stock","Stomach","Stone","Stop","Storage","Store","Storm","Story","Straight","Strange","Stranger","Strategic","Strategy","Stream","Street","Strength","Strengthen","Stress","Stretch","Strike","String","Strip","Stroke","Strong","Strongly","Structure","Struggle","Student","Studio","Study","Stuff","Stupid","Style","Subject","Submit","Subsequent","Substance","Substantial","Succeed","Success","Successful","Successfully","Such","Sudden","Suddenly","Sue","Suffer","Sufficient","Sugar","Suggest","Suggestion","Suicide","Suit","Summer","Summit","Sun","Super","Supply","Support","Supporter","Suppose","Supposed","Supreme","Sure","Surely","Surface","Surgery","Surprise","Surprised","Surprising","Surprisingly","Surround","Survey","Survival","Survive","Survivor","Suspect","Sustain","Swear","Sweep","Sweet","Swim","Swing","Switch","Symbol","Symptom","System","Table","Tablespoon","Tactic","Tail","Take","Tale","Talent","Talk","Tall","Tank","Tap","Tape","Target","Task","Taste","Tax","Taxpayer","Tea","Teach","Teacher","Teaching","Team","Tear","Teaspoon","Technical","Technique","Technology","Teen","Teenager","Telephone","Telescope","Television","Tell","Temperature","Temporary","Ten","Tend","Tendency","Tennis","Tension","Tent","Term","Terms","Terrible","Territory","Terror","Terrorism","Terrorist","Test","Testify","Testimony","Testing","Text","Than","Thank","Thanks","That","The","Theater","Their","Them","Theme","Themselves","Then","Theory","Therapy","There","Therefore","These","They","Thick","Thin","Thing","Think","Thinking","Third","Thirty","This","Those","Though","Thought","Thousand","Threat","Threaten","Three","Throat","Through","Throughout","Throw","Thus","Ticket","Tie","Tight","Time","Tiny","Tip","Tire","Tired","Tissue","Title","To","Tobacco","Today","Toe","Together","Tomato","Tomorrow","Tone","Tongue","Tonight","Too","Tool","Tooth","Top","Topic","Toss","Total","Totally","Touch","Tough","Tour","Tourist","Tournament","Toward","Towards","Tower","Town","Toy","Trace","Track","Trade","Tradition","Traditional","Traffic","Tragedy","Trail","Train","Training","Transfer","Transform","Transformation","Transition","Translate","Transportation","Travel","Treat","Treatment","Treaty","Tree","Tremendous","Trend","Trial","Tribe","Trick","Trip","Troop","Trouble","Truck","True","Truly","Trust","Truth","Try","Tube","Tunnel","Turn","TV","Twelve","Twenty","Twice","Twin","Two","Type","Typical","Typically","Ugly","Ultimate","Ultimately","Unable","Uncle","Under","Undergo","Understand","Understanding","Unfortunately","Uniform","Union","Unique","Unit","United","Universal","Universe","University","Unknown","Unless","Unlike","Unlikely","Until","Unusual","Up","Upon","Upper","Urban","Urge","Us","Use","Used","Useful","User","Usual","Usually","Utility","Vacation","Valley","Valuable","Value","Variable","Variation","Variety","Various","Vary","Vast","Vegetable","Vehicle","Venture","Version","Versus","Very","Vessel","Veteran","Via","Victim","Victory","Video","View","Viewer","Village","Violate","Violation","Violence","Violent","Virtually","Virtue","Virus","Visible","Vision","Visit","Visitor","Visual","Vital","Voice","Volume","Volunteer","Vote","Voter","Vs","Vulnerable","Wage","Wait","Wake","Walk","Wall","Wander","Want","War","Warm","Warn","Warning","Wash","Waste","Watch","Water","Wave","Way","We","Weak","Wealth","Wealthy","Weapon","Wear","Weather","Wedding","Week","Weekend","Weekly","Weigh","Weight","Welcome","Welfare","Well","West","Western","Wet","What","Whatever","Wheel","When","Whenever","Where","Whereas","Whether","Which","While","Whisper","White","Who","Whole","Whom","Whose","Why","Wide","Widely","Widespread","Wife","Wild","Will","Willing","Win","Wind","Window","Wine","Wing","Winner","Winter","Wipe","Wire","Wisdom","Wise","Wish","With","Withdraw","Within","Without","Witness","Woman","Wonder","Wonderful","Wood","Wooden","Word","Work","Worker","Working","Works","Workshop","World","Worried","Worry","Worth","Would","Wound","Wrap","Write","Writer","Writing","Wrong","Yard","Yeah","Year","Yell","Yellow","Yes","Yesterday","Yet","Yield","You","Young","Your","Yours","Yourself","Youth","Zone"];
+        blocks.push(new Block(wall1.x + wall1.w, -25, wall3.w - wall1.w*2, 20, "#202830", words[Math.floor(Math.random() * words.length)]));
+    }
+    createBlock();
+
+    function animate() {
+        animation = requestAnimationFrame(animate);
+        ctx.fillStyle = "#f1f5f8";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        wall1.update();
+        wall2.update();
+        wall3.update();
+
+        blocks.forEach(block => {
+            block.update();
+            if (block.y + block.h > collisionY && block.active && !gameOver) {
+                block.active = false;
+                block.vel.y = 0;
+                block.y = collisionY - block.h;
+                createBlock();
+                collisionY -= block.h;
+            }
+        })
+
+        if (collisionY - blocks[0].h < wall1.y) {
+            blocks.splice(blocks.length -1, 1);
+            gameOver = true;
+            cancelAnimationFrame(animation);
+            blocks[blocks.length -1].y = collisionY;
+            blocks[blocks.length -1].update();
+            $("#restart").style.opacity = "1";
+            $("#restart").style.pointerEvents = "all";
+        }
+
+    }
+    // animate()
+
+    $("#openKeyboard").addEventListener("click", () => {
+        $("#game-input").focus();
+    })
+
+    $("#game-input").addEventListener("input", () => {
+        if ($("#game-input").value.length == 1) {
+            lastLetter = $("#game-input").value;
+        } else {
+            lastLetter = $("#game-input").value.charAt($("#game-input").value.length -1);
+        }
+
+        if (blocks[blocks.length -1].word != "Press Space!") {
+            if (lastLetter != blocks[blocks.length -1].word.charAt(0)) {
+                score -= 5;
+                $("#score").innerHTML = score;
+            }
+        } else {
+            if (lastLetter == " ") {
+                score += Math.round(Math.random() * (15 - 5) + 5);
+                $("#score").innerHTML = score;
+            }
+        }
+
+        if (lastLetter == blocks[blocks.length -1].word.charAt(0) && blocks[blocks.length -1].word != "Press Space!") {
+            blocks[blocks.length -1].word = blocks[blocks.length -1].word.slice(1, blocks[blocks.length]);
+            if (blocks[blocks.length -1].word == "") {
+                blocks[blocks.length -1].word = "Press Space!";
+            }
+        } else if (blocks[blocks.length -1].word == "Press Space!") {
+            if (lastLetter == " ") {
+                blocks.splice(blocks.length -1, 1);
+                createBlock();
+            }
+        }
+
+
+    })
+    function restartGame() {
+        blocks = [];
+        gameOver = false;
+        collisionY = wall3.y;
+        score = 0;
+        speedY = 0.6;
+        $("#score").innerHTML = score;
+        createBlock();
+        animate();
+        $("#restart").style.opacity = "0";
+        $("#restart").style.pointerEvents = "none";
+    }
+    $("#restart").addEventListener("click", restartGame);
+
+    setInterval(() => {
+        speedY += 0.01;
+    }, 90000)
+
+    // }
+
+
+
+    $("#startGameBtn").addEventListener("click", () => {
+        container.style.display = "none";
+        nav.style.display = "none";
+        restartGame();
+        $("#game-container").style.display = "block";
+        window.scrollTo(0, 0);
+    })
+    $("#game-back-btn").addEventListener("click", () => {
+        $("#game-container").style.display = "none";
+        container.style.display = "block";
+        nav.style.display = "flex";
+        cancelAnimationFrame(animation);
+        // $("#game-input").value = "";
+    })
+
+
+    $("#contact-us-submit-btn").addEventListener("click", e => {
+        e.preventDefault();
+        sendMail();
+    })
+
+    function sendMail() {
+        let name = $("#contact-us-name").value;
+        let subject = $("#contact-us-subject").value;
+        let message = $("#contact-us-message").value;
+        message = message.replace(/\n/g,
+            "%0A");
+        let email = "abhishekpanfey6033@gmail.com";
+
+        let url = `mailto:${email}?subject=${subject}%20-%20${name}&body=${message}`;
+        location.href = url;
+    }
+
+
+    $("#input").addEventListener("paste", e => {
+        e.preventDefault();
+    })
+    
+    
+    
+</script>
+</body>
+</html>
